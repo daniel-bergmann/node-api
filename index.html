@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api test</title>
+  </head>
+  <body>
+    <h1>This is a test for a simple API I made with Node.js</h1>
+    <h2>
+      The output of the API coming from
+      <a href="https://still-hamlet-84373.herokuapp.com/food">here</a>:
+    </h2>
+
+    <div id="name"></div>
+    <div id="origin"></div>
+    <div id="price"></div>
+
+    <script>
+      // declaring variables
+      const name = document.getElementById('name');
+      const origin = document.getElementById('origin');
+      const price = document.getElementById('price');
+      const url = 'https://still-hamlet-84373.herokuapp.com/food';
+      
+
+      // function for the API fetch
+      async function getFood() {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        console.log(data);
+        try {
+          // Placing the data inside the DOM
+          name.innerHTML = data[2].name;
+          origin.innerHTML = data[2].origin;
+          price.innerHTML = data[2].price;
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      // calling function
+      getFood();
+    </script>
+  </body>
+</html>

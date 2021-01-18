@@ -1,0 +1,22 @@
+[
+  {
+    "name": "lasagna",
+    "origin": "Italian",
+    "price": "$5"
+  },
+  {
+    "name": "pizza",
+    "origin": "Italian",
+    "price": "$10"
+  },
+  {
+    "name": "Plokkfiskur",
+    "origin": "Icelandic",
+    "price": "$5"
+  },
+  {
+    "name": "Sushi",
+    "origin": "Japanese",
+    "price": "$14"
+  }
+]
